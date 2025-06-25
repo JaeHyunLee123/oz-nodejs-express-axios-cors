@@ -41,15 +41,15 @@ app.get("/", (req, res) => {
 });
 
 app.post("/", (req, res) => {
-  data.message = req.body;
+  data.message = req.body.message;
 
-  res.status(200).send(`받은 POST 데이터: ${req.body}`);
+  res.status(200).send(`업데이트된 데이터: ${req.body.message}`);
 });
 
 app.put("/", (req, res) => {
-  data.message = req.body;
+  data.message = req.body.message;
 
-  res.status(200).send(`업데이트된 데이터: ${req.body}`);
+  res.status(200).send(`업데이트된 데이터: ${req.body.message}`);
 });
 
 app.delete("/", (req, res) => {
